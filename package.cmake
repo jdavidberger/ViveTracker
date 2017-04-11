@@ -1,0 +1,8 @@
+SET(CGET_CONFIG_SHARED_BIN_DIR OFF)
+include(${CGET_CORE_DIR}.cget/core.cmake)
+
+set(CGET_ALLOW_SYSTEM ON)
+
+if(BUILD_EXAMPLES)
+    CGET_HAS_DEPENDENCY(Qt5 REGISTRY COMPONENTS Core Gui Qml Quick 3DQuick 3DExtras 3DQuickExtras OpenGL)
+endif()
